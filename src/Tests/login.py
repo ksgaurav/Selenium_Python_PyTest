@@ -13,8 +13,7 @@ class LoginTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.driver = webdriver.Firefox(
-            executable_path="C:/Users/GauravSingh/PycharmProjects/SeleniumProject/drivers/geckodriver.exe")
+        cls.driver = webdriver.Firefox(executable_path="C:/Users/GauravSingh/PycharmProjects/SeleniumProject/drivers/geckodriver.exe")
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(5)
 
@@ -42,7 +41,7 @@ class LoginTest(unittest.TestCase):
         expected_dialogue2 = login.check_blank_Password_credentials()
         assert expected_dialogue2 == "Please enter your password"
 
-    # validate that entering only valid userName and blank password and clicking on login button should not successfully Login
+    # Validate that entering only valid userName and blank password and clicking on login button should not successfully Login
     def test_invalid_pass_blank(self):
         driver = self.driver
         driver.get(siteurl)
