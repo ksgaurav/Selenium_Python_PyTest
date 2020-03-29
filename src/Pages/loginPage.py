@@ -6,6 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 class LoginPage():
     def __init__(self, driver):
         self.driver = driver
+        # Element Locator path is Here
         self.username_textbox_xpath = "/html//input[@id='login-form:email']"
         self.password_textbox_xpath = "//input[@id='login-form:password']"
         self.submit_button = "/html//input[@id='login-form:login']"
